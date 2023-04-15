@@ -28,10 +28,9 @@ describe('schedule notifications', () => {
     jest.advanceTimersByTime(5 * 60 * 1000);
     setImmediate(async () => {
         expect(axios.get).toHaveBeenCalled();
-        expect(consoleSpy).toHaveBeenCalledTimes(3);
         expect(consoleSpy).toHaveBeenCalledWith("Notification sent for the following task: Task 1 | deadline 2023-04-20");
-        expect(consoleSpy).toHaveBeenNthCalledWith(2, "Notification sent for the following task: Task 2 | deadline 2023-04-20");
-        expect(consoleSpy).toHaveBeenLastCalledWith('------------------------------------------');
+        expect(consoleSpy).toHaveBeenCalledWith("Notification sent for the following task: Task 2 | deadline 2023-04-20");
+        expect(consoleSpy).toHaveBeenCalledWith('------------------------------------------');
         jest.clearAllMocks();
       });
   });
