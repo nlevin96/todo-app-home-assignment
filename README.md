@@ -88,15 +88,15 @@ For development, you can run the app in dev mode by running npm run start:dev an
 
 ## Todo-microservice
 
-The TODO microservice implements RESTful API for the todos. It contains the described endpoints above for the end user and for the notifications service.
+The TODO microservice implements RESTful API for the todos. It contains the described endpoints above for the end user and for the notifications service.  
 It's connected to MongoDB and using common modules like express and mongoose.
 
 <a name="notification-microservice"/>
 
 ## Notification-microservice
 
-The notification microservice implements logic that sends the user notifications when a todo is close to its deadline and have't completed yet.
-It contains a scheduler function that sends a get request every period of time (5 minutes) that returns all the todos that are close to the deadline.
+The notification microservice implements logic that sends the user notifications when a todo is close to its deadline and haven't completed yet.  
+It contains a scheduler function that sends a get request every period of time (5 minutes) that returns all the todos that are close to the deadline.  
 It is possible to query the endpoint with daysLeft parameter that defines what "close" means - the default value is 3 days left - you can change it in the config.
 
 Note: In a real world app the scheduler might be called once a day, but for testing the logic I implemented it with 5 minutes.
