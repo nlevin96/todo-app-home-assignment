@@ -1,13 +1,15 @@
 const mongoose = require('mongoose')
 const { MONGO_URI } = require('../config')
 
+const logger = require('../logger')
+
 async function connect() {
     try{
         await mongoose.connect(MONGO_URI);
-        console.log('Connected to MongoDB');
+        logger.info('Connected to MongoDB');
     }
     catch(err) {
-        console.error(err);
+        logger.error(err);
     }
 }
 
