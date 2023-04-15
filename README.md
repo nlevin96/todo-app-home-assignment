@@ -1,18 +1,18 @@
 # TODOs Web Application
 
-This is a microservices-based web application for managing todos and sending notifications when a todo deadline is reached is close.
+This is a microservices-based web application for managing todos and sending notifications when a todos' deadline is close.
 The application is built using Node.js and MongoDB for the backend and Angular for the frontend.
 
 ## Table of Contents
-[Installation](#installation)
-[Usage](#usage)
-[Endpoints](#endpoints)
-[Request-Body](#request-body)
-[Tests](#tests)
-[Assumptions](#assumptions)
-[Todo-microservice](#todo-microservice)
-[Notification-microservice](#notification-microservice)
-[UI](#ui)
+[Installation](#installation)  
+[Usage](#usage)  
+[Endpoints](#endpoints)  
+[Request-Body](#request-body)  
+[Tests](#tests)  
+[Assumptions](#assumptions)  
+[Todo-microservice](#todo-microservice)  
+[Notification-microservice](#notification-microservice)  
+[UI](#ui)  
 
 <a name="installation"/>
 
@@ -21,14 +21,14 @@ The application is built using Node.js and MongoDB for the backend and Angular f
 1. Clone the repository
 2. Install Node.js and MongoDB on your system for running the backend
 3. Install Angular CLI for running the UI
-4. If you want to run with Dockerfile make share docker is installed on your machine
+4. If you want to run with Dockerfile make sure docker is installed on your machine
 5. Install dependencies using npm install command in each folder
 
-<a name="usage/>
+<a name="usage"/>
 
 ## Usage
 
-Before starting make sure the MONGO_URI is OK
+First, make sure the MONGO_URI is OK
 
 ### usage using docker
 
@@ -48,19 +48,19 @@ note: you can see the logs in the console by running docker logs IMAGE_NAME -f
 2. Start the Notification microservice using npm run start command
 3. Start the UI by running ng serve -o
 
-<a name="endpoints/>
+<a name="endpoints"/>
 
 ## Endpoints
 The Todo microservice has the following endpoints:
 
-POST /api/todo - Create a new todo
-GET /api/todo - Get all todos
-PUT /api/todo/:id - Update a todo by ID
-DELETE /api/todo/:id - Delete a todo by ID
-GET /api/todo/deadline-upcoming - Get all the todos with a close deadline (default - in 3 days - can be changed in the configuration)
-GET /api/todo/:id - Get a todo by ID
+POST /api/todo - Create a new todo  
+GET /api/todo - Get all todos  
+PUT /api/todo/:id - Update a todo by ID  
+DELETE /api/todo/:id - Delete a todo by ID  
+GET /api/todo/deadline-upcoming - Get all the todos with a close deadline (default - in 3 days - can be changed in the configuration)  
+GET /api/todo/:id - Get a todo by ID  
 
-<a name="request-body/>
+<a name="request-body"/>
 
 ## Request Body
 The request body for creating or updating a todo should be in JSON format, and include the following fields:
