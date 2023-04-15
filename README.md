@@ -65,8 +65,8 @@ GET /api/todo/:id - Get a todo by ID
 ## Request Body
 The request body for creating or updating a todo should be in JSON format, and include the following fields:
 
-content(required) - A content/description of the todo
-deadline(optional) - The deadline for the todo in ISO-8601 format (e.g. "2023-05-01T00:00:00.000Z") - if not included the default is 7 days
+content(required) - A content/description of the todo  
+deadline(optional) - The deadline for the todo in ISO-8601 format (e.g. "2023-05-01T00:00:00.000Z") - if not included the default is 7 days  
 completed(optional) - Boolean. default value is false
 
 Example request body:
