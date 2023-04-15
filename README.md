@@ -28,7 +28,7 @@ The application is built using Node.js and MongoDB for the backend and Angular f
 
 ## Usage
 
-Before update the MONGO_URI in the todo/config folder
+Before starting make sure the MONGO_URI is OK
 
 ### usage using docker
 
@@ -38,7 +38,7 @@ Before update the MONGO_URI in the todo/config folder
 4. Create a new network by running: docker network create NETWORK_NAME
 5. Start the todo-microservice with the following command: docker run --name todo --network NETWORK_NAME -p 8080:8080 -d todo-microservice
 6. Start the notification microservice with the following command: docker run --name notification --network NETWORK_NAME -p 8081:8081 -d notifications-microservice
-7. After both of the microservices are running open the UI folder and run: ng serve -o in order to open the UI and manage the todos
+7. After both of the microservices are running open the UI folder and run: npm install and ng serve -o in order to open the UI and manage the todos
 
 note: you can see the logs in the console by running docker logs IMAGE_NAME -f
 
